@@ -9,35 +9,38 @@
 </head>
 <body>
   <header class="header container">
-    <a href="#"><img class="logo" src="images/logo.png" alt="Logo"></a>
+    <a href="index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>
     <nav class="navbar">
       <ul>
-        <li class="active-homelink"><a href="#">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="listings.html">Listings</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <img class="mobile-menu" src="images/menu.svg" alt="Menu">
+        <li class="active-link"><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
+  
+  <section class="contact__section">
+    <h1 class="contact-headline">Need information ?</h1>
+    <h3 class="contact-subline">DOn´t hesitate <br>and Get in touch with us!</h3>
 
-  <section class="home__section">
-    <div class="left-side">
-      <img src="images/main-img.png" alt="Mark Zagoryljak">
-    </div>
-    <div class="right-side">
-      <h1 class="home-headline">Home is <br> where your heart <br> leads you !</h1>
-      <h4 class="home-subline">Let me show you the right way</h4>
-      <hr class="separate-line">
-      <p class="home-paragraph">
-        Your best adviser in Real Estate segment. <br> We created the whole new strategy on researching perfect homes for you and your family and connecting you with society.
-      </p>
-      <button class="main-btn">About me</button>
+    <div class="message-wrapper">
+      <form>
+        <div class="left-form">
+          <input type="text" placeholder="NAME">
+          <input type="email" placeholder="MAIL">
+        </div>
+        <div class="right-form">
+          <textarea id="subject" name="subject" placeholder="MESSAGE" rows="4" cols="50"></textarea>
+        </div>
+
+      </form>
+      <input class="submit-btn" type="submit" value="Submit">
     </div>
   </section>
 
   <footer class="footer">
-    <a href="about.html"><img src="images/arrow.png" alt="DOWN"></a>
+    <a href="index.html"><img src="images/arrow.png" alt="DOWN"></a>
     <div class="social-media">
       <a href="https://www.instagram.com" target="_blank">
         <img src="images/social-medias/ing.png" alt="Instagram">
