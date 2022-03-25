@@ -5,6 +5,7 @@
   font-family: 'League Spartan', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -61,10 +62,10 @@ a {
 .main-btn {
   margin-top: 40px;
   margin-bottom: 30px;
-  border: 2px solid var(--white);
-  background-color: var(--black);
+  border: 3px solid var(--white);
+  background-color: transparent;
   color: var(--white);
-  padding: 20px 40px;
+  padding: 20px 50px;
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 700;
@@ -87,7 +88,8 @@ a {
 }
 
 .main-btn:hover {
-  background-color: #192e35;
+  -webkit-box-shadow: 0 0 17px var(--white);
+          box-shadow: 0 0 17px var(--white);
 }
 
 .mobile-menu {
@@ -102,7 +104,7 @@ a {
 }
 
 .header {
-  padding-top: 20px;
+  height: 140px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,7 +117,7 @@ a {
 }
 
 .header .logo {
-  width: 80%;
+  width: 300px;
   -webkit-transition: all .4s;
   transition: all .4s;
 }
@@ -150,7 +152,8 @@ a {
   }
 }
 
-.header .navbar li {
+.header .list {
+  opacity: 0;
   font-size: 20px;
   padding-bottom: 3px;
   border-bottom: var(--underline-height) solid transparent;
@@ -160,22 +163,22 @@ a {
 }
 
 @media (max-width: 740px) {
-  .header .navbar li {
+  .header .list {
     display: none;
   }
 }
 
-.header .navbar li:hover {
+.header .list:hover {
   border-bottom: var(--underline-height) solid var(--blue-sky);
 }
 
-.header .navbar li:hover:nth-child(1) {
+.header .list:hover:nth-child(1) {
   border-bottom: var(--underline-height) solid transparent;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-.header .navbar li:hover:nth-child(1)::before {
+.header .list:hover:nth-child(1)::before {
   -webkit-transition: .3s;
   transition: .3s;
   content: "";

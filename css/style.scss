@@ -5,6 +5,7 @@
   padding: 0;
   font-family: 'League Spartan', sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 :root {
   --main-color: #133c46;
@@ -80,10 +81,10 @@ a {
 .main-btn {
   margin-top: 40px;
   margin-bottom: 30px;
-  border: 2px solid var(--white);
-  background-color: var(--black);
+  border: 3px solid var(--white);
+  background-color: transparent;
   color: var(--white);
-  padding: 20px 40px;
+  padding: 20px 50px;
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 700;
@@ -97,7 +98,7 @@ a {
     background-color: var(--main-color);
   }
   &:hover {
-    background-color: #192e35;
+    box-shadow: 0 0 17px var(--white); 
   }
 }
 
@@ -110,12 +111,12 @@ a {
 }
 
 .header {
-  padding-top: 20px;
+  height: 140px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   & .logo {
-    width: 80%;
+    width: 300px;
     transition: all .4s;
     @include tablet {
       width: 240px;
@@ -134,7 +135,8 @@ a {
       gap: 50px;
     }
   }
-  & .navbar li {
+  & .list {
+    opacity: 0;
     font-size: 20px;
     padding-bottom: 3px;
     border-bottom: var(--underline-height) solid transparent;
