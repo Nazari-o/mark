@@ -5,7 +5,7 @@
   font-family: 'League Spartan', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 :root {
@@ -40,6 +40,16 @@ body {
 @media (max-width: 480px) {
   .container {
     padding: 0 10px;
+  }
+}
+
+.mobile-break {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .mobile-break {
+    display: block;
   }
 }
 
@@ -648,9 +658,21 @@ a {
   color: var(--main-color);
 }
 
+@media (max-width: 480px) {
+  .contact__section .contact-headline {
+    font-size: 40px;
+  }
+}
+
 .contact__section .business-card {
   margin-top: 40px;
   width: 100%;
+}
+
+@media (max-width: 480px) {
+  .contact__section .business-card {
+    margin-top: 20px;
+  }
 }
 
 .contact__section .contact-subline {
@@ -661,8 +683,22 @@ a {
   text-transform: uppercase;
 }
 
+@media (max-width: 480px) {
+  .contact__section .contact-subline {
+    font-size: 28px;
+    margin-top: 0;
+  }
+}
+
 .contact__section .message-wrapper {
   margin-top: 30px;
+}
+
+@media (max-width: 480px) {
+  .contact__section .message-wrapper {
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
 }
 
 .contact__section form {
@@ -674,6 +710,15 @@ a {
   margin-bottom: 40px;
 }
 
+@media (max-width: 480px) {
+  .contact__section form {
+    height: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+}
+
 .contact__section .left-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -683,6 +728,12 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media (max-width: 480px) {
+  .contact__section .left-form {
+    width: 100%;
+  }
 }
 
 .contact__section input, .contact__section textarea {
@@ -718,10 +769,31 @@ a {
   font-weight: 600;
 }
 
+@media (max-width: 480px) {
+  .contact__section input::-webkit-input-placeholder, .contact__section textarea::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+  .contact__section input:-ms-input-placeholder, .contact__section textarea:-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .contact__section input::-ms-input-placeholder, .contact__section textarea::-ms-input-placeholder {
+    font-size: 16px;
+  }
+  .contact__section input::placeholder, .contact__section textarea::placeholder {
+    font-size: 16px;
+  }
+}
+
 .contact__section textarea {
   resize: none;
   height: 100%;
   width: 350px;
+}
+
+@media (max-width: 480px) {
+  .contact__section textarea {
+    width: 100%;
+  }
 }
 
 .contact__section .submit-btn {
@@ -737,6 +809,13 @@ a {
   transition: all .4s;
 }
 
+@media (max-width: 480px) {
+  .contact__section .submit-btn {
+    font-size: 18px;
+    padding: 14px 40px;
+  }
+}
+
 .contact__section .submit-btn:hover {
   background-color: transparent;
   border: 3px solid var(--main-color);
@@ -748,6 +827,12 @@ a {
 .social-media {
   margin-bottom: 50px;
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .social-media {
+    margin-bottom: 20px;
+  }
 }
 
 .social-media img {
@@ -764,8 +849,20 @@ a {
   background: none;
 }
 
+@media (max-width: 480px) {
+  .social-media img {
+    width: 28px;
+  }
+}
+
 .social-media a + a {
   margin-left: 60px;
+}
+
+@media (max-width: 480px) {
+  .social-media a + a {
+    margin-left: 40px;
+  }
 }
 
 .social-media .ing:hover {
@@ -798,5 +895,11 @@ a {
 .footer .arrow {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
+}
+
+@media (max-width: 480px) {
+  .footer .arrow {
+    width: 24px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
