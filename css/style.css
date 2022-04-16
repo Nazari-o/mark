@@ -326,6 +326,7 @@ a {
   width: 100%;
   max-width: 500px;
   max-height: 580px;
+  object-fit: contain;
 }
 
 @media (max-width: 480px) {
