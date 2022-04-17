@@ -376,9 +376,10 @@ a {
   & .left-img {
     max-width: 570px;
     @include smallDesktop {
-      max-width: 450px;
+      // max-width: 450px;
       align-self: flex-start;
     }
+
   }
   & .left-img img {
     width: 100%;
@@ -414,10 +415,7 @@ a {
     font-weight: 400;
     color: var(--main-color);
     line-height: 66px;
-    @include smallDesktop {
-      font-size: 48px;
-      line-height: 54px;
-    }
+
     @include mobile {
       font-size: 38px;
       line-height: 42px;
@@ -442,6 +440,12 @@ a {
     margin: 24px 0 15px 14px;
     display: grid;
     grid-template-columns: repeat(2, auto);
+
+    @include mobile {
+      gap: 10px;
+      grid-template-columns: auto;
+
+    }
   }
   & .about-list li {
     list-style: disc;
@@ -539,6 +543,8 @@ a {
 }
 
 .contact__section {
+  margin-left: auto;
+  margin-right: auto;
   max-width: 1500px;
   margin-top: 200px;
   min-height: 70vh;
@@ -603,7 +609,11 @@ a {
     display: flex;
     gap: 20px;
     flex-direction: column;
+    @include smallTablet {
+      flex-direction: row;
+    }
     @include mobile {
+      flex-direction: column;
       width: 100%;
     }
   }
