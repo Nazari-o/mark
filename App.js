@@ -16,6 +16,8 @@ function openMenu() {
 }
 
 linkList.addEventListener('click', () => {
-  navbar.style.display = 'none';
-})
+  if (screen.width < 741) {
+    navbar.style.display = 'none';
+  }
+});
 
