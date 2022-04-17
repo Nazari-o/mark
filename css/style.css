@@ -727,7 +727,7 @@ a {
 
 .popular__section .residence__card-price {
   font-size: 18px;
-  color: var(--main-color);
+  color: var(--main-color) !important;
   font-weight: 700;
 }
 
