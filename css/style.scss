@@ -147,6 +147,9 @@ a {
   transition: .4s;
   background: var(--main-color);
 
+  @include smallTablet {
+    overflow: unset;
+  }
   & .logo {
     width: 280px;
     transition: all .4s;
@@ -167,6 +170,25 @@ a {
       transform: rotate(5deg);
     }
   }
+  & .navbar {
+    @include smallTablet {
+      display: none;
+      position: absolute !important;
+      top: 100px;
+      right: 100px;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background-color: var(--dark-gray);
+        top: -360px;
+        left: -200px;
+        z-index: -1;
+        border-radius: 50%;
+      }
+    }
+  }
   & .navbar ul {
     display: flex;
     gap: 100px;
@@ -176,6 +198,11 @@ a {
     @include tablet {
       gap: 50px;
     }
+    @include smallTablet {
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
   }
   & .navbar li {
     
@@ -184,9 +211,6 @@ a {
     border-bottom: var(--underline-height) solid transparent;
     transition: .3s;
     position: relative;
-    @include smallTablet {
-      display: none;
-    }
 
     &:hover {
       border-bottom: var(--underline-height) solid var(--blue-sky);
@@ -259,6 +283,7 @@ a {
     width: 100%;
     max-width: 500px;
     max-height: 580px;
+    object-fit: contain;
     @include mobile {
       margin-bottom: 100px;
     }

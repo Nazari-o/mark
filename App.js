@@ -23,3 +23,18 @@
 
 // gsap.from('.anim3', {delay: 1, opacity: 0, duration: 1, y: -200, stagger: .3, scrollTrigger: '.anim3'});
 // gsap.from('.anim31', {delay: 1, opacity: 0, duration: 1, y: 200, stagger: .3, scrollTrigger: '.anim31'});
+
+const burgerMenu = document.querySelector('.mobile-menu');
+const navbar = document.querySelector('.navbar');
+const linkList = document.querySelector('.list');
+
+burgerMenu.addEventListener('click', openMenu);
+
+// document.querySelector('.navbar').style.display = 'block';
+function openMenu() {
+  if (navbar.style.display === 'block') {
+    navbar.style.display = 'none';
+  } else {
+    navbar.style.display = 'block'
+  }
+}
