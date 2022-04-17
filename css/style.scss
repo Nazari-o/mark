@@ -127,6 +127,7 @@ a {
 
 
 .mobile-menu {
+  z-index: 100;
   display: none;
   width: 40px;
   @include smallTablet {
@@ -151,6 +152,8 @@ a {
     overflow: unset;
   }
   & .logo {
+    position: relative;
+    z-index: 99;
     width: 280px;
     transition: all .4s;
     @include tablet {
@@ -173,19 +176,20 @@ a {
   & .navbar {
     @include smallTablet {
       display: none;
-      position: absolute !important;
-      top: 100px;
-      right: 100px;
+      position: absolute;
+      top: 90px;
+      left: 50%;
+      transform: translate(-50%, 0);
       &::before {
         content: '';
         position: absolute;
-        width: 600px;
-        height: 600px;
-        background-color: var(--dark-gray);
-        top: -360px;
-        left: -200px;
-        z-index: -1;
-        border-radius: 50%;
+        width: 750px;
+        height: 320px;
+        background-color: rgba(#133c46, 0.6);
+        top: -100px;
+        left: -345px;
+        z-index: 0;
+        // border-radius: 50%;
       }
     }
   }
